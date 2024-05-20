@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script/dom.js" defer></script>
+    <!-- defer -> 아래서부터 읽으라는 명령어. 필수!!!!!!!!!!!!! -->
+</head>
+<body>
+    <button type="button" id="link" onClick="btn_func()">구글 바로가기</button>
+    <!-- 관리만 접속할 수 있는 사이트, 레벨이 갖춰진 사용자만 가능한 사이트를 만들 때 자바 윈도우 로케이션으로 만든다 -->
+    <button type="button" onClick="google_text()">HTML에 "Hello JS" 글자표시하기</button>
+    <button type="button" onClick="google_tap()">구글 새 탭으로 열기</button>
+    <button type="button" onClick="google_new()">500x500 크기로 구글 새 창 열기</button>
+    <hr>
+    <h1>대제목</h1>
+    <h1>대제목</h1>
+    <ul>
+        <li><a href="#">link1</a></li>
+        <li><a href="#">link2</a></li>
+        <li><a href="#">link3</a></li>
+    </ul>
+    <!-- <script src="./script/dom.js"></script> -->
+    <!-- 
+        * 일부 script를 head 태그에 작성하면 html 읽기 전이 됨으로 dom 연결 시 undefined가 출력된다
+        * 외부 script를 body 태그내에 모든 태그 입력 후 가장 아래쪽에 작성하면 모든 태그를 읽은 후이기 때문에
+        JS 내에서 dom 연결 시 올바른 dom 정보가 출력된다.
+    -->
+    <hr>
+    <h2 class="title">제목2</h2>
+    <h3 class="title">제목3</h3>
+    <ul>
+        <li class="list"><a href="#">a1</a></li>
+        <li class="list"><a href="#">a2</a></li>
+        <li class="list"><a href="#">a3</a></li>
+    </ul>
+    <hr>
+    <nav>
+        <ul class="gnb">
+            <li><a href="#">menu1</a>
+                <ul class="lnb">
+                    <li><a href="#">sub_menu1</a></li>
+                    <li><a href="#">sub_menu2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu2</a>
+                <ul class="lnb">
+                    <li><a href="#">sub_menu1</a></li>
+                    <li><a href="#">sub_menu2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
