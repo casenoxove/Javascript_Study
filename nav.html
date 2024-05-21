@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script/nav.js" defer></script>
+    <style>
+        * {
+            box-sizing:border-box;
+            margin:0; padding: 0; line-height: 1.0;
+            list-style: none; font-size: 1.0em; 
+        }
+        header {
+            background-color: aqua; width: 1000px; height: 100px;
+            margin: 30px auto 0;
+        }
+        header h1 {}
+        header nav {}
+        header nav .gnb {
+            display: flex;
+        }
+        header nav .gnb > li {
+            width: 200px;
+            border:1px solid red;
+            position: relative;
+        }
+        header nav .gnb > li > a {
+            background-color: yellow;
+            text-align: center;
+            display: block;
+            line-height: 50px;
+        }
+        header nav .gnb > li > .sub {
+            border: 2px solid blue;
+            position: absolute; left: 0; top: 50;
+            width: 100%;
+        }
+        header nav .gnb > li > .sub li {}
+        header nav .gnb > li > .sub li a {
+            background-color: lime;
+            display: block; line-height: 30px;
+            text-align: center;
+        }
+        /*
+            sub가 있는 nav 디자인 순서
+            1. 메인 메뉴 디자인 전 서브 메뉴 숨기기 display:none
+            2. 메인 메뉴 디자인 진행
+            3. 서브 숨긴 대상 보이기 display:none 제외
+            4. 서브메뉴에 position:absolute 설정하고 디자인 진행
+        */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>logo</h1>
+        <nav>
+            <!-- 서브 메뉴가 추가로 있는 내비게이션은 ul-li 안에 다시 ul-li가 있는 구조 -->
+            <ul class="gnb">
+                <li><a href="#">menu1</a>
+                    <ul class="sub">
+                        <li><a href="#">menu1</a></li>
+                        <li><a href="#">menu2</a></li>
+                        <li><a href="#">menu3</a></li>
+                        <li><a href="#">menu4</a></li>
+                        <li><a href="#">menu5</a></li>
+                        <li><a href="#">menu6</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">menu2</a>
+                    <ul class="sub">
+                        <li><a href="#">menu1</a></li>
+                        <li><a href="#">menu2</a></li>
+                        <li><a href="#">menu3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">menu3</a>
+                    <ul class="sub">
+                        <li><a href="#">menu1</a></li>
+                        <li><a href="#">menu2</a></li>
+                        <li><a href="#">menu3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">menu4</a>
+                    <ul class="sub">
+                        <li><a href="#">menu5</a></li>
+                        <li><a href="#">menu6</a></li>
+                        <li><a href="#">menu7</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
