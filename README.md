@@ -132,3 +132,57 @@
 * `const 이름 = [{},{},{}]`
 * `const 이름 = [{key:value, key:value,},{},{}...]`
 * `const 이름 = [{key:[v1,v2], key:value},{},{}]`
+## BOM, DOM
+### BOM (Browser Object Mode1)
+* `window` 최상위 객체를 기준으로 속성, 메소드 이용
+* `windoe` 는 웹 브라우저 자체를 가르키기 때문에 생략 가능하다.
+* 자주 사용하는 속성, 메소드
+* `alart()` , `prompt()`, `confirm()`, `location` 등...
+* `window_alart();` = `alart{};`
+### DOM (Document Object Mode2)
+* `document` 본문 최상위 객체 대상이므로 속성, 메소드 이용, 생략할 수 없다.
+#### DOM 선택 시 자주 사용하는 메서드(함수) 종류
+* `document.getElementsByTagName("태그명")`
+* `document.getElementsByClassName("클래스명")`
+* `document.getElementsByIdName("아이디명")`
+* `document.querySeletor("태그명")`
+* `document.querySeletor(".클래스명")`
+* `document.querySeletor("#아이디명")`
+* `document.querySeletorAll ("태그명")`
+* `document.querySeletorAll (".클래스명")`
+<!-- 아이디는 하나여서 All에 들어가지 않음 -->
+* `getElements...` 와 `querySeletorAll` 함수는 `index` 사용해서
+   대상을 선택하므로 사용 시 주의가 필요하다.
+-----------------------------------
+## 가족관계선택속성
+* `parentNode`, `parentElement`
+* `header>nav` 관계 DOM이 있을 때 `nav` 의 부몰르 선택할 때 이용할 수 있다.
+* `DOM.parentNode`, `DOM.parentElement.parentElement` 등...
+### childNodes, children
+* 자식, 자손 잡기
+* console.log(headerChild2[n].innerHTML)
+* console.log(headerChild2[n].innerText)
+* 단순 읽기, 변경 단순 수행 (style 불가능)
+* `firstChild`, `firstElementChild`
+* `lastChild`, `lastElementChild`
+### nextSibling, nextElementSibling
+* `nextSibling` : 공백 포함 다음 형제
+* `nextElementSibling` : 다음 형제 요소만 인식 속성
+### previousSibling, previousElementSibling
+* `previousSibling` : 공백 포함 이전 형제 속성
+* `previousElementSibling` : 이전 형제 요소만 인식 속성
+## 자바 스크립트 객체 속성
+* `innerHTML` : 객체, 속성
+* 자바스크립트로 HTML DOM 제작 시 HTML 읽기, 삽입, 수정 진행용으로 사용하는 속성
+* `<span>0</span>` -> `<em>1</em>`
+* `<span class="a">0</span>` -> <span class="b">0</span>`
+* `innerText` : 객체, 속성
+* `<span>0</span>` span 태그가 아닌 단순 문자 0 값만 변경하려고 할 때 사용하는 속성
+## 자바 스크립트 연산자
+* `=` 대입연산자
+* `var a =10`
+* `a = 20` // 최종 a의 결과는? 20
+* `+=` 복합대입연산자
+* 새로운 값이 대입될 때 기존 값에 추가 대입된다.
+* `var a = 10`
+* `a += 20` // 최종 a의 결과는? 30 `a = a+20`
