@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script/scroll.js" defer></script>
+    <style>
+        html, body {
+            scroll-behavior: smooth;
+        }
+        body {
+            height: 300vh;
+            background: linear-gradient(180deg, rgb(182, 176, 197), rgb(241, 204, 210), rgb(235, 226, 199));
+        }
+        .btn {
+            position: fixed;
+            left: 20px; top: 20px;
+            width: 50px; height: 50px;
+            border-radius: 50px;
+            border: 0;
+            background-color: #FFF;
+            color: rgb(233, 139, 163);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        .btn:nth-child(2) {
+            left: 80px;
+            color: lightcoral;
+        }
+        .btn:nth-child(3) {
+            left: 140px;
+            color: rgb(255, 80, 80);
+        }
+        .bg {
+            height: 500px;
+            border: 10px solid #fff;
+        }
+        .bg1 {}
+        .bg2 {border-color: lightpink;}
+        .bg3 {border-color: lightyellow;}
+    </style>
+</head>
+<body>
+    <button type="button" class="btn">1</button>
+    <button type="button" class="btn">2</button>
+    <button type="button" class="btn">3</button>
+    <div class="bg bg1"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+</body>
+</html>
