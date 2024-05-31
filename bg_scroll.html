@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script/bg_scroll.js" defer></script>
+    <link rel="stylesheet" href="./style/reset.css">
+    <style>
+        html,body {
+            scroll-behavior: smooth;
+        }
+        main {
+            position: relative;
+        }
+        main > * {
+            width: 100vw;
+            height: 1100px;
+            background-position: center;
+            background-size: cover;
+        }
+        main .one {
+            background-image: url(./images/annie-spratt-nWiS2rgtVts-unsplash.jpg);
+        }
+        main .two {
+            background-image: url(./images/marcel-strauss-KuK7W7qwYYI-unsplash.jpg);
+        }
+        main .three {
+            background-image: url(./images/rodion-kutsaiev-F573ZRbKOEw-unsplash.jpg);
+        }
+        main .four {
+            background-image: url(./images/sean-sinclair-C_NJKfnTR5A-unsplash.jpg);
+        }
+        main nav {
+            position: fixed;
+            right: -1970px; top: 450px;
+        }
+        main nav button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            background-color: #fff;
+            margin-top: 20px;
+            border: 0;
+            transition: width 0.5s;
+            overflow: hidden;
+        }
+        main nav button:hover {
+            width: 100px; border-radius: 10px;
+        }
+        main nav button:nth-child(1):hover::after {
+            content: 'color A';
+        }
+        main nav button:nth-child(2):hover::after {
+            content: 'color B';
+        }
+        main nav button:nth-child(3):hover::after {
+            content: 'color C';
+        }
+        main nav button:nth-child(4):hover::after {
+            content: 'color D';
+        }
+        main nav button:hover::after {
+            color: skyblue;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <nav>
+            <button type="button">　</button>
+            <button type="button">　</button>
+            <button type="button">　</button>
+            <button type="button">　</button>
+        </nav>
+    </main>
+</body>
+</html>

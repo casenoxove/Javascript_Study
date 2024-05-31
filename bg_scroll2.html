@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script/bg_scroll2.js" defer></script>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+    <style>
+        html,body {
+            scroll-behavior: smooth;
+        }
+        main {}
+        main .mouse {
+            position: fixed;
+            left: 0; top: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none; /* 마우스 클릭 대상 해제 */
+        }
+        main .bg > * {
+            width: 100vw;
+            height: 1100px;
+            background-position: center;
+            background-size: cover;
+        }
+        main .bg .one {
+            background-image: url(./images/annie-spratt-nWiS2rgtVts-unsplash.jpg);
+        } 
+        main .bg .two {
+            background-image: url(./images/marcel-strauss-KuK7W7qwYYI-unsplash.jpg);
+        } 
+        main .bg .three {
+            background-image: url(./images/rodion-kutsaiev-F573ZRbKOEw-unsplash.jpg);
+        } 
+        main .bg .four {
+            background-image: url(./images/sean-sinclair-C_NJKfnTR5A-unsplash.jpg);
+        } 
+        main .title {
+            position: fixed;
+            left: 0; top: 0;
+        }
+        main h1 {
+            padding-left: 100px;
+            padding-top: 70px;
+            font-size: 3rem;
+            letter-spacing: -0.5px;
+            font-family: "Song Myung", serif;
+            color: #fff;
+        }
+        main nav {
+            padding-left: 100px;
+            padding-top: 20px;
+        }
+        main nav button {
+            font-family: "Song Myung", serif;
+            margin-right: 20px;
+            font-size: 1.5rem;
+            position: relative;
+            border: 0;
+            background-color: rgba(0,0,0,0);
+            color: #fff;
+        }
+        main nav button:hover {
+            color: rgb(214, 237, 247);
+        }
+        main nav button:hover::after {
+            content: '';
+            position: absolute;
+            left: 0px; top: 40px;
+            width: 25px; height: 2px;
+            background-color: rgb(214, 237, 247);
+        }
+        main .bar {
+            position: fixed;
+            left: 100px; top: 500px;
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        main .bar button {
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            margin-top: 30px;
+            border: 0;
+            transition: width 0.3s;
+        }
+        .bar .active {
+            width: 50px;
+            background-color: rgb(214, 237, 247);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="mouse">
+            <img src="https://qwestore.com/png_images_min/4/bBlue-Heart-PNGb-Heart-symbol-Download-PNG-3307.png" alt="">
+        </div>
+        <div class="bg">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+        </div>
+        <div class="title">
+            <h1>Color view</h1>
+            <nav>
+                <button type="button">A</button>
+                <button type="button">B</button>
+                <button type="button">C</button>
+                <button type="button">D</button>
+            </nav>
+        </div>
+        <div class="bar">
+            <button type="button">　</button>
+            <button type="button">　</button>
+            <button type="button">　</button>
+            <button type="button">　</button>
+        </div>
+    </main>
+</body>
+</html>
