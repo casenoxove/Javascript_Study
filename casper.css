@@ -1,0 +1,321 @@
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+header {
+    position: relative;
+}
+header nav {
+    position: fixed;
+    width: 100%;
+    z-index: 70;
+}
+header nav .gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 70px;
+}
+header nav .gnb .left {
+    padding-left: 30px;
+}
+header nav .gnb .left h1 {}
+header nav .gnb .left h1 a {}
+header nav .gnb .left h1 img {}
+header nav .gnb .center {
+    display: flex;
+    position: relative;
+}
+header nav .gnb .center > li {
+    padding-left: 100px;
+}
+header nav .gnb .center > li:nth-child(1) {
+    padding-left: 0;
+}
+header nav .gnb .center > li > a {
+    font-weight: 700;
+}
+header nav .gnb .center > li >  ul {
+    position: absolute;
+    padding-top: 30px;
+    height: 300px;
+    width: 100%;
+    background-color: #fff;
+}
+header nav .gnb .center > li >  ul li {
+    padding-bottom: 20px;
+}
+header nav .gnb .center > li > ul li a {
+    font-size: 0.90rem;
+}
+header nav .gnb .center > li > ul li img {
+    width: 180px;
+}
+header nav .gnb .right {
+    padding-right: 30px;
+}
+header nav .gnb .right h2 {}
+main {}
+main .one {
+    background-image: url(../image/visual.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 70px);
+    padding-top: 150px;
+    text-align: center;
+}
+main .one .title {
+    position: relative;
+}
+main .one .title h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #fff;
+}
+main .one .title p {
+    color: #Fff;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 1.25rem;
+}
+main .one .button {}
+main .one .button a {
+    padding: 7px 20px;
+    background-color: #002C5F;
+    color: #fff;
+    margin-left: 10px;
+}
+main .one .button a:nth-child(1){
+    margin-left: 0;
+}
+main span {}
+main span img {
+    position: absolute;
+    left: 50%; top: 80%;
+    width: 50px; height: 50px;
+    filter: invert();
+    animation: up 1s infinite linear alternate;
+}
+/* 애니메이션 */
+@keyframes up {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(20px);}
+}
+main .two {
+    display: flex;
+    justify-content: space-between;
+}
+main .two .title {
+    padding-left: 30px;
+    margin-top: 50px;
+}
+main .two .title h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+main .two .title h2 span {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+main .two .title p {
+    padding-top: 10px;
+    font-size: 1.25rem;
+    color: #808080;
+}
+main .two .picture {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 60px;
+}
+main .two .picture dl {
+    margin-left: 30px;
+}
+main .two .picture dl dt {
+    padding-bottom: 10px;
+}
+main .two .picture dl dt img {}
+main .two .picture dl dd {
+    font-size: 1.25rem;
+    color: #002C5F;
+}
+main .two .picture dl dd span {
+    color: #fff;
+    background-color: #002C5F;
+    padding: 0 5px;
+}
+main .design {
+    margin-top: 250px;
+    text-align: center;
+    position: relative;
+}
+main .design h2 {
+    font-weight: 700;
+    font-size: 15rem;
+    color: #f0f0f0;
+    letter-spacing: -0.2;
+    position: absolute;
+    left: 500px; top: -130px;
+    z-index: -5;
+}
+main .design img {}
+main .three {
+    margin-top: 100px;
+    position: relative;
+}
+main .three .title {
+    background-color: #353535;
+    height: 350px;
+}
+main .three .title h2 {
+    padding-left: 30px;
+    color: #fff;
+    padding-top: 60px;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+main .three .title h2 span {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+main .three .title p {
+    padding-left: 30px;
+    color: #d2d2d2;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+main .three .title .circle {
+    display: flex;
+    padding-left: 30px;
+}
+main .three .title .circle p {
+    width: 35px; height: 35px;
+    background-color: #fff;
+    border-radius: 100px;
+    margin-left: 10px;
+}
+main .three .title .circle p:nth-child(1) {
+    margin-left: 0;
+}
+main .three .title .circle p:nth-child(2) {
+    background-color: #d2d2d2;
+}
+main .three .title .circle p:nth-child(3) {
+    background-color: #808080;
+}
+main .three .title img {
+    width: 500px;
+    position: absolute;
+    right: 0; top: 250px;
+}
+main .four {
+    margin-top: 350px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+main .four h2 {
+    padding-top: 80px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+main .four h2 span {
+    font-size: 2.5rem;
+}
+main .four p {
+    margin-top: 30px;
+    font-size: 1.25rem;
+    color: #808080;
+}
+main .four h2 p video {}
+main .five {
+    margin-top: 60px;
+}
+main .five .title {
+    padding-left: 30px;
+}
+main .five .title h2 {
+    font-size: 2.5rem;
+}
+main .five .title span {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+main .five .title p {
+    font-size: 1.25rem;
+    color: #808080;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+main .five .title a {
+    background-color: #007fa8;;
+    color: #fff;
+    padding: 7px 20px;
+}
+main .five .wrap {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+main .five .wrap dl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .five .wrap dl dt {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #007fa8;;
+}
+main .five .wrap dl dt img {}
+main .five .wrap dd {
+    text-align: center;
+    margin-bottom: 10px;
+}
+main .five .wrap dd span {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+footer {
+    margin-top: 80px;
+    background-color: #002C5F;
+    display: flex;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+footer h1 {
+    margin-right: 50px;
+}
+footer h1 a {}
+footer h1 a img {}
+footer .left {}
+footer .left p {
+    color: #fff;
+    padding-bottom: 20px;
+}
+footer .left p a {
+    color: #fff;
+    text-decoration: underline;
+}
+footer .right {}
+footer .right p {
+    color: #fff;
+    padding-bottom: 20px;
+    margin-left: 100px;
+}
+/*  */
+@media screen and (max-width: 920px){
+    .gnb .center li {
+        display: none;
+    }
+}
+@media screen and (min-width: 150px){
+    main .one {
+        width: 100%;
+    }
+}
