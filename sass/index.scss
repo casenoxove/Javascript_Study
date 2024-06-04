@@ -1,0 +1,191 @@
+@import 'common';
+// common.scss 변수 및 mixin 이용해서 중첩 선택자 규칙으로 디자인 만들기
+header {
+/*     height: 70px; background: $bg_white;
+    @include pst_fixed; width: $w100;
+    @include flex-r;
+    padding: 0 $p15; */
+    height: 65px; background-color: rgb(255, 255, 255);
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    h1 {
+        padding: $p15;
+        a {
+            img {
+                width: 106px;
+            }
+        }
+    }
+    // 모바일 전용 내비게이션 
+    nav {
+        z-index: 900;
+        .sub_bg {
+            background-color: $bg_white;
+            height: 220px;
+            @include pst_abso1; top: 70px;
+        }
+        .gnb {
+/*             width: 650px;
+            @include flex-r; */
+            width: 650px; 
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row nowrap;
+            li {
+                font-weight: 700;
+                font-size : 0.92em;
+                position: relative;
+                a {}
+                .sub {
+                    display: none;
+                    li {
+                        a {
+                            display: block;
+                            border-bottom: 1px dashed #ddd;
+                            margin: 0 25px;
+                            line-height: 40px;
+                            img {
+                                width: 70%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .lnb {
+        padding: $p15;
+        .m_nav {
+            display: none;
+            .all_nav {
+                img {}
+            }
+        }
+        .my_menu {
+            span {}
+        }
+        .notice {
+            span {}
+        }
+    }
+}
+main {
+    .visual {
+        background-image: url(../casper-main/images/visual.png);
+        height: calc(100vh - 65px); background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat;
+        position: relative;
+        .txt {
+            padding-top: 150px;
+            text-align: center;
+            color: #FFF;
+            h1 {
+                font-size: 4.5em;
+                font-weight: 800;
+            }
+            p {
+                font-size: 1.2em;
+                margin: 25px 0;
+            }
+            .link {
+                a {
+                    background-color: #002c5f;
+                    color: #FFF;
+                    font-size: 0.9em;
+                    padding: 6px 18px;
+                }
+            }
+        }
+        .scroll {
+            img {
+                width: 40px; height: 40px;
+                position: absolute;
+                left: 50%; bottom: 100px;
+                filter: invert(1);
+                animation: move_mouse 0.9s linear infinite alternate;
+            }
+        }
+    }
+    // visual end
+    .advantage {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        // align-self: flex-start;
+        .title {
+            width: 30vw;
+            h1 {
+                font-size: 2.5rem;
+                padding: $p15;
+                padding-top: 60px;
+                line-height: 1.2;
+                em {
+                    font-weight: 700;
+                }
+            }
+            p {
+                font-size: 1.25rem;
+                color: #808080;
+                padding: $p15;
+                margin-top: 15px;
+            }
+        }
+    }
+    .contents {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;
+        a {
+            padding-top: 60px;
+            .photo {
+                margin-right: 30px;
+                img {
+                    margin-bottom: 15px;
+                }
+            }
+            .img:nth-child(3) {
+                margin-right: 0;
+            }
+            .photo+p {
+            }
+            h2 {
+                margin-top: 10px;
+                font-size: 1.25rem;
+                color: #002c5f;
+                em {
+                    background-color: #002c5f;
+                    padding: 1px 10px;
+                    font-size: 0.91rem;
+                    color: #fff;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    // advantage end
+    .design {
+        position: relative;
+        margin-top: 200px;
+        padding: $p15;
+        h1 {
+            font-size: 15rem;
+            font-weight: 900;
+            color: #ddd;
+            position: absolute;
+            left: 25%; top: -100px;
+            z-index: -555;
+        }
+        .photo {
+            text-align: center;
+            img {}
+        }
+    }
+    // design end
+}

@@ -1,0 +1,170 @@
+header {
+  /*     height: 70px; background: $bg_white;
+      @include pst_fixed; width: $w100;
+      @include flex-r;
+      padding: 0 $p15; */
+  height: 65px;
+  background-color: rgb(255, 255, 255);
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  align-items: center;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+}
+header h1 {
+  padding: 0 15px;
+}
+header h1 a img {
+  width: 106px;
+}
+header nav {
+  z-index: 900;
+}
+header nav .sub_bg {
+  background-color: #fff;
+  height: 220px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  top: 70px;
+}
+header nav .gnb {
+  /*             width: 650px;
+              @include flex-r; */
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+header nav .gnb li {
+  font-weight: 700;
+  font-size: 0.92em;
+  position: relative;
+}
+header nav .gnb li .sub {
+  display: none;
+}
+header nav .gnb li .sub li a {
+  display: block;
+  border-bottom: 1px dashed #ddd;
+  margin: 0 25px;
+  line-height: 40px;
+}
+header nav .gnb li .sub li a img {
+  width: 70%;
+}
+header .lnb {
+  padding: 0 15px;
+}
+header .lnb .m_nav {
+  display: none;
+}
+main .visual {
+  background-image: url(../casper-main/images/visual.png);
+  height: calc(100vh - 65px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+main .visual .txt {
+  padding-top: 150px;
+  text-align: center;
+  color: #FFF;
+}
+main .visual .txt h1 {
+  font-size: 4.5em;
+  font-weight: 800;
+}
+main .visual .txt p {
+  font-size: 1.2em;
+  margin: 25px 0;
+}
+main .visual .txt .link a {
+  background-color: #002c5f;
+  color: #FFF;
+  font-size: 0.9em;
+  padding: 6px 18px;
+}
+main .visual .scroll img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  filter: invert(1);
+  animation: move_mouse 0.9s linear infinite alternate;
+}
+main .advantage {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main .advantage .title {
+  width: 30vw;
+}
+main .advantage .title h1 {
+  font-size: 2.5rem;
+  padding: 0 15px;
+  padding-top: 60px;
+  line-height: 1.2;
+}
+main .advantage .title h1 em {
+  font-weight: 700;
+}
+main .advantage .title p {
+  font-size: 1.25rem;
+  color: #808080;
+  padding: 0 15px;
+  margin-top: 15px;
+}
+main .contents {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+}
+main .contents a {
+  padding-top: 60px;
+}
+main .contents a .photo {
+  margin-right: 30px;
+}
+main .contents a .photo img {
+  margin-bottom: 15px;
+}
+main .contents a .img:nth-child(3) {
+  margin-right: 0;
+}
+main .contents a h2 {
+  margin-top: 10px;
+  font-size: 1.25rem;
+  color: #002c5f;
+}
+main .contents a h2 em {
+  background-color: #002c5f;
+  padding: 1px 10px;
+  font-size: 0.91rem;
+  color: #fff;
+  margin-left: 10px;
+}
+main .design {
+  position: relative;
+  margin-top: 200px;
+  padding: 0 15px;
+}
+main .design h1 {
+  font-size: 15rem;
+  font-weight: 900;
+  color: #ddd;
+  position: absolute;
+  left: 25%;
+  top: -100px;
+  z-index: -555;
+}
+main .design .photo {
+  text-align: center;
+}/*# sourceMappingURL=index.css.map */
