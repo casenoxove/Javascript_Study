@@ -46,10 +46,10 @@ header > nav .gnb > li > .sub {
     /* display: none; */
     position: absolute;
     background-color: white;
-    padding-top: 16px;
+    padding-top: 25px;
 }
 header > nav .gnb > li > .sub li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: max-content;
 }
 header > nav .gnb > li > .sub li a {
