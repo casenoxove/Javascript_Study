@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- fullpage 플러그인(구) 제이쿼리 라이브러리 연결 필수 -->
+    <!-- 필수 플러그인 fullpage CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css">
+    <!-- 필수 플러그인 fullpage JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- fullpage 플러그인 (구) 연결 필수 -->
+    <link rel="stylesheet" href="./fullPage/styles/jquery.fullPage.css">
+    <script src="./fullPage/script/jquery.fullPage.js"></script>
+    <style>
+        /* fullpage 플러그인 적용 시 각 .section
+        대상들은 height 값 적용 안해도 100vh 만큼 기본으로 인식한다. */
+        nav a {
+            font-family: "Playfair Display", serif;
+        }
+        #wrap .s1 {
+            background-image: url(https://images.unsplash.com/photo-1635776062043-223faf322554?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            height: 1000px !important;
+            /* 기본 100vh가 아닌 다른 높이값 적용 시 높이값 한 칸 띄고 !important 우선순위 속성 저용하고,
+            해당 태그위치에 추가 클래스로 fp-auto-height 설정하기 */
+        }
+        #wrap .s2 {
+            background-image: url(https://images.unsplash.com/photo-1717501218390-6b59431c9284?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            height: 1000px !important;
+        }
+        #wrap .s3 {
+            background-image: url(https://images.unsplash.com/photo-1620503234111-7009b95ac5d1?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            height: 1000px !important;
+        }
+        #wrap .s4 {
+            background-image: url(https://images.unsplash.com/photo-1605184861755-8f190fea96a5?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            height: 1000px !important;
+        }
+        nav {
+            z-index: 999;
+            position: fixed;
+            left: 30px; top: 30px;
+        }
+        nav a {
+            color: #fff;
+            display: inline-block;
+            padding: 10px 10px;
+            position: relative;
+        }
+        nav a:hover {
+            color:rgb(216, 195, 196);
+        }
+        .ani {animation: move 2s 0.5s both;}
+        @keyframes move {
+            0% {opacity: 0; transform: translateX(0px)}
+            100% {opacity: 1; transform: translateX(300px)}
+        }
+    </style>
+</head>
+<body>
+    <!-- 내비게이션 태그는 자유 설정 -->
+    <nav>
+        <a href="#intro">Intro</a>
+        <a href="#special">Special</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <!-- fullpage 태그 규칙 지키기 -->
+    <div id="wrap"> <!-- 부모 이름 자유 -->
+        <div class="section s1 fp-auto-height">1</div> <!-- section 클래스명 필수!! section 태그 불가능 -->
+        <div class="section s2 fp-auto-height">2</div> <!-- 추가 클래스 자유 -->
+        <div class="section s3 fp-auto-height"><h1>3</h1></div> <!-- 자식, 자손 태그 자유 -->
+        <div class="section s4 fp-auto-height">4</div>
+    </div>
+    <script>
+        // fullpage js 플러그인 연결 필수!
+        $('#wrap').fullpage({
+            scrollBar:true,
+            scrollingSpeed: 1000,
+            navigation: true,
+            navigationTooltips: ['소개','특징','프로젝트','연락처'],
+            showActiveTooltip: true,
+            menu: 'nav',
+            anchors: ['intro', 'special', 'project', 'contact'],
+            // fullpage 는 scrollTrigger 와 함께 이용 불가
+            // fullpage(구) 제이쿼리 기능으로 애니메이션도 연결해야한다!!
+            onLeave:function(index, nextIndex, direction){
+                console.log(index, nextIndex, direction)
+                if(index==2){
+                    $('.s3 h1').css('color','skyblue')
+                    $('.s3 h1').addClass('ani')
+                }
+            }
+        })
+    </script>
+</body>
+</html>

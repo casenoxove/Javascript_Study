@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll - 1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- 반드시 연결해야 하는 플러그인 연결 주소 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <style>
+        main {}
+        main section {
+            line-height: 100vh;
+            text-align: center;
+            font-size: 5rem;
+            background-color: rgb(188, 202, 230);
+        }
+        main .s2 {
+            background-color: rgb(15, 15, 15);
+        }
+        main section img {
+            margin-top: 450px;
+            width: 800px;
+        }
+        main .s4 {
+            background-color: rgb(226, 190, 211);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        
+        <section class="s1">1</section>
+        <section class="s2">
+            <img src="https://i.pinimg.com/564x/52/fe/c1/52fec1344f2160b844b77a1ac28d6b21.jpg" alt="">
+        </section>
+        <section class="s3">3</section>
+        <section class="s4">
+            <img src="https://i.pinimg.com/564x/50/1d/f0/501df06aad555095223b751973b3d4de.jpg" alt="">
+        </section>
+    </main>
+    <script>
+        // gasp.to('적용대상',{scrollTrigger: '뷰포트인식대상'})
+        gsap.to('.s2 img',{
+            scrollTrigger: ".s2",
+            duration: 1,
+            delay: 0.5,
+            x:0,
+            y:200,
+            borderRadius:50,
+            scale: 0.8,
+            opacity: 1,
+        })
+        gsap.to('.s4 img',{
+            scrollTrigger: "s4",
+            duration: 1,
+            x: 0,
+            y: 200,
+            borderRadius: 50,
+        })
+    </script>
+</body>
+</html>
